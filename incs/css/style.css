@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Special+Elite&display=swap');
+/* 
+
+    font-family: 'Pacifico', cursive;
+
+    font-family: 'Special Elite', cursive;
+
+*/
+:root{
+    --purple: #660099;
+    --pink: #932b76;
+    --lt-pink: #c490b6;
+    --grey: #262626;
+    --text-color: whitesmoke;
+    --header-font: 'Pacifico', cursive;
+    --body-font: 'Special Elite', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    background: var(--grey);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 15% auto;
+    grid-template-areas: 
+    "header header"
+    "info content"
+    ;
+}
+
+.header {
+    background: var(--purple);
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--header-font);
+    padding: 15px;
+    font-size: 3.5rem;
+}
+
+.location-text{
+    font-size: 2rem;
+    text-align: center;
+}
+.area{
+    text-align: center;
+    color: var(--lt-pink);
+}
+
+.info {
+    /* background: var(--grey); */
+    grid-area: info;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.info h2{
+    text-align: center;
+    font-family: var(--body-font);
+    margin-top: 55px;
+    font-size: 3.5rem;
+}
+
+.info::after{
+    content: "";
+    position: absolute;
+    height: 143px;
+    width: 154px;
+    background-image: url(../imgs/corner.png);
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+    right: 0;
+    top: 0;
+}
+.info::before{
+    content: "";
+    position: absolute;
+    height: 143px;
+    width: 154px;
+    background-image: url(../imgs/corner.png);
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+
+}
+
+.inventory-container {
+    height: auto;
+    width: 90%;
+    background: var(--text-color);
+    padding: 6px ;
+}
+.inventory-container li{
+    background: var(--pink);
+    width: 98%;
+    margin: 6px auto;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+.inventory-container li:nth-child(even){
+    background: var(--lt-pink);
+}
+
+.inventory-container li:hover {
+    filter: brightness(.80);
+    cursor: pointer;
+    scale: 1.02;
+    box-shadow: 2px 3px 0px 1px rgba(0, 0, 0, 0.8);
+
+}
+
+.btm-embelish{
+   /* margin: 10px auto; */
+   display: block;
+
+}
+
+.content {
+    background: black;
+    background-image: url("../imgs/forrest-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    font-family: var(--body-font);
+    text-shadow: 2px 2px black;
+    font-size: 2.75rem;
+    line-height: 2.5rem;
+    text-align: justify;
+}
+
+.user-input {
+    display: flex;
+    justify-content: space-between;
+}
+#input {
+    width: 80%;
+    height: 70px;
+    border-radius: 10px;
+    border: 4px solid var(--lt-pink);
+    background: rgba(102 , 0, 153, 0.75);
+    box-shadow: inset 0 0 15px 6px rgba(0, 0, 0, 0.8);
+    font-size: 2.5rem;
+    font-family: var(--body-font);
+    color: var(--text-color);
+    padding:12px;
+    caret-color: var(--lt-pink);
+}
+#button {
+    height: 70px;
+    width: 15%;
+    border-radius: 10px;
+    border: 4px solid var(--lt-pink);
+    background: rgba(102 , 0, 153, 0.75);
+    box-shadow: inset 0 0 15px 6px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: var(--body-font);
+    padding-top: 8px;
+    cursor: pointer;
+
+}
+
+#button:hover {
+    filter: brightness(1.5);
+}
+
+#button:active {
+    scale: 0.96;
+}
