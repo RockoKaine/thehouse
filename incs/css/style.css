@@ -49,6 +49,13 @@ body {
     font-size: 3.5rem;
 }
 
+#player-name{
+    /* background-color: red; */
+    width: 350px;
+}
+.location{
+    /* margin: auto; */
+}
 .location-text{
     font-size: 2rem;
     text-align: center;
@@ -111,6 +118,12 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+    font-family: var(--body-font);
+    font-size: 1.5rem;
     
 }
 .inventory-container li:nth-child(even){
@@ -123,6 +136,28 @@ body {
     scale: 1.02;
     box-shadow: 2px 3px 0px 1px rgba(0, 0, 0, 0.8);
 
+}
+
+.empty-item{
+    filter: brightness(.45);
+    pointer-events: none;
+    
+}
+
+.inv-control{
+    float: right;
+}
+
+.icons {
+    margin: 0 6px;
+    font-size: 1.5rem;
+}
+
+.fa-trash-alt:hover {
+    color: red;
+}
+.fa-question-circle:hover {
+    color: blue;
 }
 
 .btm-embelish{
@@ -140,7 +175,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px;
+    padding: 26px;
     font-family: var(--body-font);
     text-shadow: 2px 2px black;
     font-size: 2.75rem;
@@ -188,4 +223,21 @@ body {
 
 #button:active {
     scale: 0.96;
+}
+
+
+
+
+.fade-in-text {
+    animation: fade-in 1.5s ease-in;
+}
+
+@keyframes fade-in {    
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
 }
