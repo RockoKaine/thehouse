@@ -1,0 +1,23 @@
+{
+  "name": "port-game",
+  "version": "1.0.0",
+  "description": "A simple game for my portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RockoKaine/thehouse.git"
+  },
+  "author": "Rocko Kaine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RockoKaine/thehouse/issues"
+  },
+  "homepage": "https://github.com/RockoKaine/thehouse#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
